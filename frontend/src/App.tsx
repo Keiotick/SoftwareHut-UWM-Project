@@ -1,26 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+//import CustomHeader, { addNumber } from './components/CustomHeader';
+import Counter from './components/Counter';
+import CustomHeader from './components/CustomHeader';
+
+const App = () => {
+  //const addedNumber = addNumber(1, 2);
+   const [changedNumber, setChangedNumber ] = React.useState(0);
+
+  const handleNumberChange = (newNumber: number) => {
+    setChangedNumber(newNumber);
+    //console.log(newNumber)
+   // return newNumber;
+  }
+  
+  const greaterThen10 = (liczba: number) =>
+  {
+    if (liczba > 10 && liczba < 16){
+      return (<div>Liczba jest większa od 10</div>)
+    }
+  }
+
+  const greaterThen15 = (liczba: number) =>
+  {
+    if (liczba > 15){
+      return (<div>Liczba przekroczona</div>)
+    }
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomHeader>  
+              
+        {/* <Counter onNumberChange={(newNumber)=>{ console.log(newNumber) }}/> */}
+        {/* <ResetValue onNumberChange={handleNumberChange}/> */}
+        <Counter onNumberChange={handleNumberChange}/>
+        {
+          changedNumber < -10 && (<div> Liczba jest mniejsza od -10</div>)
+        }
+        {greaterThen10(changedNumber)}
+        {greaterThen15(changedNumber)}
+      </CustomHeader>
+      
     </div>
   );
+
 }
 
 export default App;
