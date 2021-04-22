@@ -1,0 +1,158 @@
+Wykład #1
+Podstawy JavaScript:
+
+
+(var let const) tekst = 'test' //nie używać var | let można redeklarować 
+
+
+STRINGI:
+
+Funkcje stringa
+
+string.includes('x') - zwraca czy padany x zawarty jest w ciągu (true/flase)
+string.charAt(x) - zwraca znak z ciągu tekstowego na pozycji x (numeruje od 0)
+string.charCodeAt(x) - zwraca Unicode znaku na pozycji x
+string.split(' ') - podajemy separator dzielący podany string na oddzielne obiekty
+string.trim() - wycina białe znaki z początku i końca ciągu
+string.toUpperCase() - zamienia litery na wielkie
+string.toLowerCase() - zamienia litery na małe
+string.replace(x,y) - zamienia wszystkie wysątpienia x na y
+
+
+
+Łączenie stringów
+
+zmienna = "kota"
+"Ala ma " + zmienna;
+
+lub
+
+`Ala ma ${zmienna}`;
+
+
+
+LICZBY:
+
+
+Funkcje liczby
+
+Number.isFinite(x); - czy podana liczba jest skończona (dzielenie przez zero zwraca false)
+
+let liczba = 1.123456
+liczba.toFixed(2) # 1.12 - zaokrągla liczbę do podanego miejsca po przecinku
+
+Math.floor(3.16) - zaokrąglanie w dół
+Math.pow() - potęgowanie
+Math.PI
+Math.random() # losowa wartość od 0 do 1
+Math.Sin()
+
+let number = 2 / 2.5  #liczby całkowite i niecałkowite
+
+
+
+
+
+PORÓWNYWANIE TYPÓW
+
+const x new Number(10);
+const y =10;
+
+x === y #false
+x == y # true
+potrójny === porównuje typy
+
+
+
+
+
+BOOLOWSKIE
+
+let boolean = true/false;
+Boolean(x) - zwaraca informacje czy coś jest prawdziwe/czy zmienna jest pusta
+
+
+
+TABLICE
+
+let tablica = [1,2,3,4,5,6,'six',true,false]; # można umieszczać mieszane dane
+tab.length - zwraca długość tablicy
+
+
+tablica.join() - łączenie tablica
+tablica.map((wartosc,index)=>{return wartosc+index}); - zmiana i przypisanie nowych wartości
+tablica.forEach((wartosc)=>{console.log(wartosc)}); - iterowanie po kolejnych wartościach tablicy
+tablica[0] - odwołanie do konkretnej komórki tablicy
+
+
+
+OBIEKTY
+
+let obiekt = {};
+
+obiekt = {
+autor: 'Jan kowalski',
+tytul: 'Ksieki Jana',
+};
+
+
+
+FUNKCJE
+
+const test = function(){} - referencja do funkcji
+function test(){} - funkcja nazwana
+
+function (parametr) {return xyz}
+const funkcja = (parametr)=>{return parametr}
+
+const funkcja2 = (parametr)=> parametr;
+
+
+let funkcja3 = (parametr)=>(parametr);
+
+funkcja3 =(parapetr)=>({obiekt:parametr});
+
+
+
+
+SWITCH
+
+switch(zmienna){
+	case 0:
+	//kod
+	break;
+	case 1:
+	//kod
+	break;
+	default:
+	//kod domyślny
+}
+
+
+
+
+PĘTLE
+
+const tablica = ['jeden', 'dwa', 'trzy']
+
+for (let index = 0; index < tablica.length; index++){
+	console.log(tablica[index])
+}
+
+
+for(let index in obiekt){
+	console.log(index);
+	console.log(obiekt[index]);
+}
+
+
+const string = 'test';
+
+
+
+for (let znak of string){
+	console.log(znak);
+}
+
+
+

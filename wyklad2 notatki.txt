@@ -1,0 +1,52 @@
+Wykład #2
+Fundamenty Reacta
+
+npx -v - wyświetlanie wersji npx
+
+npx create-react-app nazwa --template typescript
+
+cd nazwa projektu
+npm start
+
+ctrl + c - zabicie procesu
+
+package.json-
+	"@material-ui/core": "^4.9.12",
+    "@material-ui/icons": "^4.9.1",    
+    "@types/react-redux": "^7.1.8",
+    "@types/react-router": "^5.1.7",
+    "@types/react-router-dom": "^5.1.5",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "reselect": "^4.0.0"
+	
+komponenty dla ułatwienia i przyspieszenia tworzenia
+	
+
+index.html - head -
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+paczka fontów i ikon
+
+npm install - zainstalowanie podległych paczek
+
+
+app.tsx - 
+	const App = () => {  - funkcja strzałkowa
+	
+
+dummy components
+
+
+.tsx - typescript dla reacta
+
+
+(props.initialNumber || 0)
+
+
+
+    const obj = {a: 1, b: 2};
+    const { a, b } = obj;
