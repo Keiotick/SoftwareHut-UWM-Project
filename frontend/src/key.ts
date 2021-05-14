@@ -1,0 +1,1 @@
+export const apikey = 'b387a1a1';
