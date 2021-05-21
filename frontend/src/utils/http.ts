@@ -57,4 +57,4 @@ const requestFunction = <R>(
 
 
 
-    requestFunction('url',{a:1},MethodType.GET, '');
+    //requestFunction('url',{a:1},MethodType.GET, '');

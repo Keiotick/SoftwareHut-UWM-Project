@@ -2,17 +2,18 @@ import React from 'react';
 import { useParams } from 'react-router';
 import NavPanel from '../../components/NavPanel';
 
-interface MovieRouteParams{
+interface MovieRouteParams {
     id: string;
 }
 
 const Movie = () => {
     const { id } = useParams<MovieRouteParams>();
-
+    
     return (
-        <div>
+        <div> 
             <NavPanel />
-            {`This is movie page with id: ${id}`}
+            {`This is movie page with id: ${id}`} 
+
         </div>
     );
 }

@@ -1,7 +1,6 @@
-import http from '../utilis/http';
+import http from '../utils/http';
 import { apikey } from '../key';
 const url = 'http://www.omdbapi.com/';
-
 const movieService = {
     searchByName: async (name: string, page: number) => {
         try{
@@ -30,7 +29,6 @@ const movieService = {
             console.log(error);
         }
     },
-
     getById: async (id: string) => {
         const responce = await <any>http.get(url, {
             apikey: apikey,
@@ -38,5 +36,4 @@ const movieService = {
         });
     }
 };
-
 export default movieService;
