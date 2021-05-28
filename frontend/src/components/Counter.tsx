@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 interface CounterProps {
     initialNumber?: number;
@@ -26,12 +27,20 @@ const Counter:React.FC<CounterProps> = ({ initialNumber, onNumberChange }) => {
         setCounterNumber(number);
         onNumberChange && onNumberChange(number);
     }
-
+    
+    const reset = () => {
+        const number = 0;
+        setCounterNumber(number);
+        onNumberChange && onNumberChange(number);
+    }
     return (
         <div>
-            <button onClick={addNumber}>+</button>
+            <Button onNumberChange={addNumber} charOfButton={'+'}/>
+            
             {counterNumber}
-            <button onClick={decreaseNumber}>-</button>
+            <Button onNumberChange={decreaseNumber} charOfButton={'-'}/>
+            <br></br>
+            <Button onNumberChange={reset} charOfButton={'reset'}/>
         </div>
     );
 };

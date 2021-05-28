@@ -4,6 +4,7 @@ const url = 'http://www.omdbapi.com/';
 const movieService = {
     searchByName: async (name: string, page: number) => {
         try{
+            // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
             const responce = await <any>http.get(url, {
                 apikey: apikey,
                 s: name,
@@ -30,6 +31,7 @@ const movieService = {
         }
     },
     getById: async (id: string) => {
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
         const responce = await <any>http.get(url, {
             apikey: apikey,
             i: id,

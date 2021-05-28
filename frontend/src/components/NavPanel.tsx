@@ -23,7 +23,7 @@ const NavPanel = () => {
     const classes = useStyles();
 
     const redirectTo = (path: string, name: string) => 
-        <div onClick={()=>{ history.push("/") }}>{name}</div>
+        <div onClick={()=>{ history.push(path) }}>{name}</div>
 
     return (
         <div>

@@ -11,7 +11,7 @@ const Home = () => {
             try {
 
             const responce = movieService.searchByName(search,1);
-            
+
             setMovie(responce);
             }catch(error){
                 console.log(error);
@@ -27,3 +27,20 @@ const Home = () => {
     );
 }
 export default Home;
+
+// const Home = () => {
+
+//     React.useEffect(() => {
+//         const makeRequest = async () => {
+//             const response = fetch(`http://www.omdbapi.com/?apikey=`);
+//         };
+//     }, []);
+
+//     return (
+//         <div> 
+//             <NavPanel />
+//             <div>This is home page</div>
+//         </div>
+//     );
+// }
+// export default Home;
